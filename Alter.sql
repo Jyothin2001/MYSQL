@@ -93,6 +93,10 @@ ALTER table CUSTOMER RENAME COLUMN PHONE_NUMBER TO Phone_Number;
  ALTER TABLE EMPLOYEE DROP FIRST_NAME;
  ALTER TABLE EMPLOYEE DROP LAST_NAME;
  
+ select * from employee;
+ ALTER table employee drop salary;
+ 
+ 
  
  use Oder_history; /* 5 */
  CREATE TABLE Oder_Info(Oder_ID int,Customer_ID int,Oder_date date);

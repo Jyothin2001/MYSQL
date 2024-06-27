@@ -88,3 +88,40 @@ In DDL(create,alter,drop,delete ) we cant't use WHERE clause and from is also a 
     
     SELECT * from sales where sale_id=114;
      SELECT * from sales where quantity=6;
+     
+     
+     create table employee(id int not null unique,e_id int primary key,e_name varchar(30),salary bigint,e_position varchar(20),
+department varchar(20));
+    create table company1(id int not null unique,e_id int ,foreign key(e_id) references employee(e_id) on delete cascade on update cascade,
+    name varchar(20),address varchar(20),ceo varchar(20));
+    delete from  company1 ;
+    Alter table company1 modify column c_id int;     
+      INSERT into Employee values(1,101,"rahul",50000,"trainee","frontend");
+      INSERT into Employee values(2,102,"ramu",80000,"HR","Development");
+      delete from company1 where c_id=102;
+       INSERT into Employee values(3,103,"raghu",30000,"Trainee","Development");
+        INSERT into Employee values(4,104,"rahul",30000,"Trainee","Development");
+         INSERT into Employee values(5,105,"ramya",30000,"Trainee","Development");
+          INSERT into Employee values(6,106,"raani",30000,"Trainee","finance");
+           INSERT into Employee values(7,107,"teja",60000,"Team Lead","finance");
+            INSERT into Employee values(8,108,"kumar",30000,"Trainee","Development");
+             INSERT into Employee values(9,109,"shiva",30000,"Trainee","Development");
+              INSERT into Employee values(10,110,"ganesha",30000,"Trainee","Development");
+               INSERT into Employee values(11,111,"raj",30000,"Trainee","Development");
+    
+    select * from company1;
+    desc company1;
+INSERT INTO COMPANY1 values(11,101,"Wipro","manyathaTechPark","Jyothi");
+INSERT INTO COMPANY1 values(11,101,"Wipro","manyathaTechPark","Jyothi");
+insert into company1 values(12,102,"TATA","manyathaTechPark","rathan tata"),(13,103,"windows","hebbal","bill gates");
+insert into company1 values(14,104,"cognizant","manyathaTechPark","narana"),(15,105,"windows","hebbal","bill gates"),
+(16,106,"cognizant","manyathaTechPark","narana"),(17,107,"windows","hebbal","bill gates");
+INSERT INTO COMPANY1 values(18,108,"Wipro","manyathaTechPark","raj");
+INSERT INTO COMPANY1 values(19,109,"Wipro","manyathaTechPark","ram");
+INSERT INTO COMPANY1 values(20,109,"Wipro","manyathaTechPark","ram");
+INSERT INTO COMPANY1 values(21,110,"Wipro","manyathaTechPark","Jyothi");
+delete from employee where e_id=102;
+INSERT INTO COMPANY1 values(22,110,"Wipro","manyathaTechPark","Jyothi");
+INSERT INTO COMPANY1 values(23,114,"Wipro","manyathaTechPark","Jyothi");productsproductproductscustomers
+ 
+
